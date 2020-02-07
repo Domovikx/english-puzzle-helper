@@ -1,3 +1,8 @@
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
 body {
   margin: 0 auto;
   padding: 15px;
@@ -7,9 +12,11 @@ body {
   background: #333;
   color: #fff;
 }
+
 form {
   max-width: 100%;
 }
+
 textarea {
   max-width: 100%;
   min-width: 100%;
@@ -17,4 +24,36 @@ textarea {
 
 .words {
   text-align: center;
+}
+
+a,
+button {
+  color: #222;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+  transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+  border-radius: 4px;
+
+  display: block;
+
+  width: fit-content;
+  margin: 0 auto;
+  font-size: 14px;
+  text-align: center;
+
+  margin-bottom: 10px;
+  padding: 10px 20px;
+
+  text-decoration: none;
+}
+
+a:hover,
+button:hover,
+a:hover,
+button:focus {
+  border-color: rgba(82, 168, 236, 0.8);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset,
+    0 0 8px rgba(82, 168, 236, 0.6);
+  outline: 0 none;
 }
