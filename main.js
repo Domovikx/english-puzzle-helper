@@ -2,27 +2,26 @@ const state = {
   words
 };
 
+const textareaElement = document.getElementById("textarea");
+const wordsElement = document.getElementById("words");
+
 (function main() {
-  const textarea = document.getElementById("textarea");
-
-  refreshTextarea(textarea);
-
-  textarea.addEventListener("click", refreshTextarea);
-  textarea.addEventListener("keyup", refreshTextarea);
+  refreshTextarea(textareaElement);
+  textareaElement.addEventListener("click", refreshTextarea);
+  textareaElement.addEventListener("keyup", refreshTextarea);
 })();
 
 function refreshTextarea() {
-  const wordsElement = document.getElementById("words");
   changeHeightTextarea();
-  const words = getWords(textarea.value);
+  const words = getWords(textareaElement.value);
   state.words = words;
   renderWords(words, wordsElement);
 }
 
 function changeHeightTextarea() {
-  const element = document.getElementById("textarea");
-  element.style.height = "0px";
-  element.style.height = element.scrollHeight + "px";
+  const padding = 4;
+  textareaElement.style.height = "0px";
+  textareaElement.style.height = textareaElement.scrollHeight + padding + "px";
 }
 
 function getWords(value) {
